@@ -9,6 +9,7 @@ var cors = require('cors');
 var router = require('./routes.js');
 
 var app = express();
+
 module.exports.app = app;
 
 // Set what we are listening on.
@@ -24,6 +25,7 @@ app.use('/classes', router);
 
 // Serve the client files
 app.use(express.static(__dirname + '/../client'));
+
 
 // If we are being run directly, run the server.
 if (!module.parent) {
